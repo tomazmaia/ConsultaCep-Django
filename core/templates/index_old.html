@@ -1,0 +1,11 @@
+{% extends "base_css_frworks/base.html" %}
+{% block content %}
+    <h1>CONSULTA CEP</h1>
+
+    <form action="{% url 'consultar' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="cep">
+        <button type="submit">CONSULTAR</button>
+        <button type="reset">LIMPAR</button>
+    </form>
+{% endblock %}

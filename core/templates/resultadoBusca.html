@@ -1,0 +1,19 @@
+{% extends "base_css_frworks/base.html" %}
+{% block content %}
+  <div class="container">
+    <h1 class="text-light">RESULTADO DA BUSCA</h1>
+    <div class="card mb-3">
+        <div class="header text-center">
+          <h3 class="card-title"><strong>ENDEREÇO</strong></h3>
+        </div>
+        <div class="card-body mb-3">                  
+            {% for key, value in data.items %}
+
+              <p class="card-text"><strong>{{ key }} : </strong>{{ value }}</p>
+
+            {% endfor %}
+        </div>
+        <button class="btn btn-dark mb-6"><a href="{% url 'retornar' %}">RETORNAR</a></button>
+    </div>
+  </div>
+{% endblock %}
